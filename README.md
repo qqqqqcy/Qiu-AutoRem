@@ -46,4 +46,4 @@ autoRem.render(obj)
 // 渲染属性中有 auto-src 的元素为背景，el 可以指定元素，不指定表示所有
 autoRem.renderImg(el) 
 ```
->[demo](https://github.com/xiajunqcy/Qiu-AutoRem/tree/master/demo)
+>[demo](https://xiajunqcy.github.io/Qiu-AutoRem/demo/index)
