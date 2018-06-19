@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiu-AutoRem Demo</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            max-width: 768px;
+            min-width: 320px;
+            margin: auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size:.9rem;
+            color: crimson;
+        }
+        main {
+            width: 2rem;
+            margin: .5rem auto;
+        }
+        h2 {
+            padding: .1rem;
+            font-size: .3rem;
+        }
+    </style>
+</head>
+<body>
+    <header auto-src="./bg-1.png">
+        <h1>Hello World!</h1>
+    </header>
+    <main auto-src="./bg-1.png">
+        <h2>Foo bar</h2>
+    </main>
+    <footer auto-src="./bg-2.png">
+        <h3>I'm footer</h3>
+    </footer>
+    <script src="../lib/autoRem.js"></script>
+    <script>
+        var autoRem = new AutoRem()
+    </script>
+</body>
+</html>
