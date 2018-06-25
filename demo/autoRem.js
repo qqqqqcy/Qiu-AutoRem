@@ -4,7 +4,7 @@ function AutoRem(obj) {
     } else {
         this.standard = {}
     }
-    this.standard.width = this.standard.width || 375
+    this.standard.width = this.standard.width || 750
     this.standard.scale = this.standard.scale || 100
     this.render()
     this.addListener()
@@ -27,7 +27,7 @@ AutoRem.prototype.resetSrc = function () {
 
 AutoRem.prototype.standFontsize = function () {
     var scale = this.standard.scale % 2 ? (this.standard.scale / 2).toFixed(1) : parseInt(this.standard.scale / 2)
-    return scale * (this.limitWidth(window.innerWidth) / this.standard.width) //  设置标准单位rem
+    return scale * (this.limitWidth(window.innerWidth) / (this.standard.width / 2)) //  设置标准单位rem
 }
 
 AutoRem.prototype.render = function (obj) {
@@ -36,7 +36,7 @@ AutoRem.prototype.render = function (obj) {
         this.standard.scale = obj.scale || this.standard.scale
     }
     this.resetSrc()
-    document.querySelector('html').style.fontSize =  this.standFontsize() + 'px'
+    document.querySelector('html').style.fontSize = this.standFontsize() + 'px'
     this.renderImg()
 }
 AutoRem.prototype.limitWidth = function (n) {
